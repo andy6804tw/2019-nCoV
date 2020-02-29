@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="./css/number.animate.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/number.animate.css">
+  <link rel="stylesheet" href="css/move-top.css">
 </head>
 
 <body>
@@ -20,13 +23,13 @@
     <div class="collapse navbar-collapse text-right" id="navbarNav">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#section-banner">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#number">即時疫情</a>
+          <a class="nav-link" href="#section-number">即時疫情</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#map">疫情地圖</a>
+          <a class="nav-link" href="#section-map">疫情地圖</a>
         </li>
       </ul>
     </div>
@@ -664,7 +667,7 @@
       </g>
     </g>
   </svg>
-  <div class="section-number p-4" id="number">
+  <div class="section-number p-4" id="section-number">
     <div class="container">
       <div class="row text-center p-4">
         <div class="col">
@@ -674,10 +677,6 @@
       <div class="row text-center">
         <!-- 中國大陸確診 -->
         <div class="col-md-2 col-sm-4">
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-          </span>
           <h5 class="service-heading">中國大陸確診</h5>
           <p class="number programs">
             <span class="number-animate" data-end-value="79251" data-increment="1">0</span><br>
@@ -686,10 +685,6 @@
         </div>
         <!-- 台灣確診 -->
         <div class="col-md-2 col-sm-4">
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-          </span>
           <h5 class="service-heading">台灣確診</h5>
           <p class="number programs">
             <span class="number-animate" data-end-value="34" data-increment="1">0</span><br>
@@ -698,10 +693,6 @@
         </div>
         <!-- 全球確診 -->
         <div class="col-md-2 col-sm-4">
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-          </span>
           <h5 class="service-heading">全球確診</h5>
           <p class="number programs">
             <span class="number-animate" data-end-value="85109" data-increment="1">0</span><br>
@@ -710,10 +701,6 @@
         </div>
         <!-- 中國大陸死亡 -->
         <div class="col-md-2 col-sm-4">
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-          </span>
           <h5 class="service-heading">中國大陸死亡</h5>
           <p class="number programs">
             <span class="number-animate" data-end-value="2835" data-increment="1">0</span><br>
@@ -722,10 +709,6 @@
         </div>
         <!-- 台灣死亡 -->
         <div class="col-md-2 col-sm-4">
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-          </span>
           <h5 class="service-heading">台灣死亡</h5>
           <p class="number programs">
             <span class="number-animate" data-end-value="1" data-increment="1">0</span><br>
@@ -734,10 +717,6 @@
         </div>
         <!-- 全球死亡 -->
         <div class="col-md-2 col-sm-4">
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-          </span>
           <h5 class="service-heading">全球死亡</h5>
           <!-- number animate -->
           <p class="number programs">
@@ -757,7 +736,7 @@
   </div>
 
   <!-- MAP CHART -->
-  <div class="section-map p-4 text-center" id="map">
+  <div class="section-map p-4 text-center" id="section-map">
     <div class="row m-4">
       <div class="col-md-12 col-lg-6">
         <h2>確診地區</h2>
@@ -812,8 +791,16 @@
         style="width: 14px;"> coding </p>
   </div>
 
+  <!-- Scroll to top -->
+  <p class="cd-top text--replace js-cd-top" id="back-top">
+    <a href="#"><span></span></a>
+  </p>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-  <script src="/js/number.animate.js"></script>
+  <script src="js/number.animate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/moveTop.js"></script>
 </body>
 
 </html>
