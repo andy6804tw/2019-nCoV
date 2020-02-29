@@ -11,6 +11,27 @@
 </head>
 
 <body>
+  <!-- Header -->
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light px-5 py-4">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-right" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#number">即時疫情</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#map">疫情地圖</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- banner -->
   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500.36 172.2">
     <defs>
       <style>
@@ -643,7 +664,7 @@
       </g>
     </g>
   </svg>
-  <div class="section-number p-4">
+  <div class="section-number p-4" id="number">
     <div class="container">
       <div class="row text-center p-4">
         <div class="col">
@@ -736,7 +757,7 @@
   </div>
 
   <!-- MAP CHART -->
-  <div class="section p-4 text-center">
+  <div class="section-map p-4 text-center" id="map">
     <div class="row m-4">
       <div class="col-md-12 col-lg-6">
         <h2>確診地區</h2>
