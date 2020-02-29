@@ -9,7 +9,7 @@
   "license": "ISC",
   "scripts": {
     "start": "babel-node src/index.js",
-    "build": "babel api/src -d dist",
+    "build": "babel api/src -d api/dist",
     "debug": "nodemon -L src/index.js --exec babel-node",
     "serve": "node dist/index.js",
     "test": "nyc mocha --require babel-register --timeout 10000 --exit",
