@@ -1,6 +1,5 @@
 import express from 'express';
 // Router
-import mqtt from './mqtt.route';
 import virus from './virus.route';
 import config from './../../config/config';
 
@@ -12,9 +11,7 @@ router.get('/', (req, res) => {
   res.send(`server started on PORT ${config.port} (${config.env})`);
 });
 
-/** User Router */
+/** virus Router */
 router.use('/virus', virus);
-/** Student Router */
-router.use('/mqtt', mqtt);
 
 export default router;
