@@ -1,10 +1,10 @@
-/* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 body{
   font-family: 'Noto Sans TC', sans-serif;
   margin: 0;
   padding: 0;
   background: #f4ae62;
-} */
+}
 
 /* Header */
 /* nav */
@@ -15,7 +15,7 @@ body{
 .section{
   width: 100%;
   height: 500px;
-  background: rgb(211, 174, 174);
+  background: rgb(252, 209, 209);
 }
 .section-number{
   width:100%;
@@ -29,7 +29,21 @@ body{
 .section-map{
   width: 100%;
   /* height: 500px; */
-  background: rgb(211, 174, 174);
+  /* background: rgb(252, 209, 209); */
+  margin: auto;
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQTpyrNZYAqIwDOU7vFghrgDuu9rlLjS-ThblPKeNjRoUaBIrSs");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section-clean{
+  background: #fff;
+}
+
+.section-mask{
+  background: #CBE4CB;
 }
 
 .section2{
