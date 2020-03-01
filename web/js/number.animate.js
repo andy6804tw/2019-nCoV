@@ -1,6 +1,7 @@
 // Don't forget to use the polyfill for forEach! :) 
 
-document.querySelectorAll('.number-animate').forEach( (el) => {
+const initAnimated=()=>{
+  document.querySelectorAll('.number-animate').forEach( (el) => {
     const endValue = el.getAttribute('data-end-value');
     const incrementValue = el.getAttribute('data-increment');
     const durationValue = el.getAttribute('data-duration');
@@ -19,3 +20,4 @@ document.querySelectorAll('.number-animate').forEach( (el) => {
       duration: duration ? duration : 4000,
     });
   }
+}
