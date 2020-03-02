@@ -10,4 +10,7 @@ router.route('/test')
 router.route('/')
   .get(virusCtrl.dataGet);
 
+router.route('/countryEpidLevel')
+  .get(virusCtrl.countryEpidLevelGet);
+
 export default router;
