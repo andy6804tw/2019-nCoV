@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css); */
 body{
   font-family: 'Noto Sans TC', sans-serif;
   margin: 0;
@@ -20,7 +20,7 @@ body{
 .section-number{
   width:100%;
   margin: auto;
-	background-image: url("https://i.imgur.com/mGvBtlC.jpg");
+	background-image: url("../image/bg-section-number.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -31,7 +31,7 @@ body{
   /* height: 500px; */
   /* background: rgb(252, 209, 209); */
   margin: auto;
-	background-image: url("https://images.unsplash.com/reserve/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80");
+	background-image: url("../image/bg-section-map.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
