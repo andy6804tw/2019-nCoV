@@ -46,6 +46,11 @@ body{
   background: #CBE4CB;
 }
 
+.section-country-EpidLevel {
+  height: 500px;
+  background: #fff;
+}
+
 /* Footer */
 #site-footer {
   position: relative;
