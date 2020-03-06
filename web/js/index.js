@@ -25,6 +25,7 @@ if (window.scrollTo) {
 /**
  * HTTP Request
  */
+// 疫情統計
 axios.get(`https://novel-coronavirus-2019.herokuapp.com/virus`)
     .then((response) => {
             var dataObject = response.data;
@@ -46,3 +47,27 @@ axios.get(`https://novel-coronavirus-2019.herokuapp.com/virus`)
             initAnimated();
         }
     );
+
+    // 旅遊等級警示
+    axios.get(`https://novel-coronavirus-2019.herokuapp.com/virus/countryEpidLevel`)
+        .then((response) => {
+                var dataObject = response.data[0].result;
+                const list = document.getElementById('countryEpidLevel');
+                console.log(dataObject)
+                // render DOM
+                for(let i=0;i<dataObject.length;i++){
+                    console.log(dataObject[i]);
+                    const item = document.createElement('tr');
+                    item.innerHTML = `
+                    <td> ${dataObject[i].region} </td> 
+                    <td> ${dataObject[i].country} </td> 
+                    <td> ${dataObject[i].level} </td>
+                    <td > ${dataObject[i].updateTime} </td>
+                        `;
+                    list.appendChild(item);
+                }
+            },
+            (error) => {
+                var message = error.response.data.message;
+            }
+        );
