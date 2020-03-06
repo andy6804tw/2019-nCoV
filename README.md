@@ -46,3 +46,7 @@ https://datastudio.google.com/u/0/reporting/1kN-rtGY8b2TPjPfS6e7JfHRfV_2lhX_e/pa
 
 
 API : https://novel-coronavirus-2019.herokuapp.com/virus/countryEpidLevel
+
+https://www.coronatracker.com/analytics/
+
+https://api.coronatracker.com/news/trending?limit=9&offset=0&countryCode=&country=&language=zh_TW
