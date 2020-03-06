@@ -20,7 +20,7 @@ body{
 .section-number{
   width:100%;
   margin: auto;
-	background-image: url("../image/bg-section-number.webp");
+	background-image: url("../image/bg-section-number.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -31,7 +31,7 @@ body{
   /* height: 500px; */
   /* background: rgb(252, 209, 209); */
   margin: auto;
-	background-image: url("../image/bg-section-map.webp");
+	background-image: url("../image/bg-section-map.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
