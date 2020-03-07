@@ -1,9 +1,9 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://novel-coronavirus-2019.herokuapp.com/)
 
-![](/screenshot/demo.gif)
-
 # 2019-nCoV
 ## [Website](https://andy6804tw.github.io/2019-nCoV)
+
+![](/screenshot/demo.gif)
 
 ## OpenData API
 Deploy on Heroku. More detail you can see at 
