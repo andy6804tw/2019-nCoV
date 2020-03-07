@@ -1,0 +1,21 @@
+/* index  card */
+/* card image zoom */
+.card {
+  overflow: hidden;
+}
+
+.card-image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.card:hover img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}

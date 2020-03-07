@@ -31,7 +31,7 @@ body{
   /* height: 500px; */
   /* background: rgb(252, 209, 209); */
   margin: auto;
-	background-image: url("../image/bg-section-map.jpg");
+	background-image: url("https://images.pexels.com/photos/1209658/pexels-photo-1209658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -48,6 +48,16 @@ body{
 
 .section-country-EpidLevel {
   background: #fff;
+}
+
+.section-news{
+  background: #fff;
+}
+.section-news a{
+  color: #000;
+}
+.section-news a:hover {
+  text-decoration: none;
 }
 
 /* Footer */
