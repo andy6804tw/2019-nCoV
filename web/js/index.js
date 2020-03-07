@@ -75,10 +75,8 @@ axios.get(`https://api.coronatracker.com/news/trending?limit=5&offset=0&countryC
     .then((response) => {
             var dataObject = response.data.items;
             const newsItem = document.getElementById('newsItem');
-            console.log(dataObject)
             for(let i=0;i<dataObject.length;i++){
                 const postTime = moment.utc(dataObject[i].publishedAt).local().format('YYYY-MM-DD HH:mm:ss');
-                console.log(postTime);
                 const item = document.createElement('a');
                 item.classList = 'card col-12 my-3';
                 item.href = dataObject[i].url;
@@ -98,7 +96,6 @@ axios.get(`https://api.coronatracker.com/news/trending?limit=5&offset=0&countryC
                     </div>
                         `;
                 newsItem.appendChild(item);
-                console.log(i)
             }
         },
         (error) => {
