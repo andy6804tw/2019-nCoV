@@ -70,7 +70,7 @@ axios.get(`https://novel-coronavirus-2019.herokuapp.com/virus/countryEpidLevel`)
         }
     );
 
-// 旅遊等級警示
+// 新聞
 axios.get(`https://api.coronatracker.com/news/trending?limit=5&offset=0&countryCode=&country=&language=zh_TW`)
     .then((response) => {
             var dataObject = response.data.items;

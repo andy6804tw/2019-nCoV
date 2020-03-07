@@ -13,4 +13,7 @@ router.route('/')
 router.route('/countryEpidLevel')
   .get(virusCtrl.countryEpidLevelGet);
 
+router.route('/news/zh')
+  .get(virusCtrl.newsGet);
+
 export default router;

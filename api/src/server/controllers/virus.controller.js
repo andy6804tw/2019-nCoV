@@ -65,13 +65,13 @@ const countryEpidLevelGet = (req, res) => {
     }
     const $ = cheerio.load(body); // 載入 body
     const result = []; // 建立一個儲存結果的容器
-    const table_tr = $(".table-responsive").eq(0).find('tr'); // 爬最外層的 Table(class=BoxTable) 中的 tr
-    for (let i = 1; i < table_tr.length; i += 1) {
-      const table_td = table_tr.eq(i).find('td'); // 擷取每個欄位(td)
-      const region = table_td.eq(0).text().trim();
-      const country = table_td.eq(1).text().trim();
-      const level = table_td.eq(3).text().trim();
-      const updateTime = table_td.eq(4).text().trim();
+    const tableTr = $('.table-responsive').eq(0).find('tr'); // 爬最外層的 Table(class=BoxTable) 中的 tr
+    for (let i = 1; i < tableTr.length; i += 1) {
+      const tableTd = tableTr.eq(i).find('td'); // 擷取每個欄位(td)
+      const region = tableTd.eq(0).text().trim();
+      const country = tableTd.eq(1).text().trim();
+      const level = tableTd.eq(3).text().trim();
+      const updateTime = tableTd.eq(4).text().trim();
       const dataObject = Object.assign({
         region,
         country,
@@ -85,10 +85,25 @@ const countryEpidLevelGet = (req, res) => {
       result
     }]));
   });
-}
+};
+
+const newsGet = (req, res) => {
+  request({
+    url: 'https://api.coronatracker.com/news/trending?limit=5&offset=0&countryCode=&country=&language=zh_TW',
+    method: 'GET'
+  }, (error, response, body) => {
+    if (error || !body) {
+      return;
+    }
+    const $ = cheerio.load(body); // 載入 body
+    const result = $.text(); // 建立一個儲存結果的容器
+    res.send(result);
+  });
+};
 
 export default {
   test,
   dataGet,
-  countryEpidLevelGet
+  countryEpidLevelGet,
+  newsGet
 };
