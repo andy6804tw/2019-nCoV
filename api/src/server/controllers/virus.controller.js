@@ -16,16 +16,18 @@ const dataGet = (req, res) => {
     const $ = cheerio.load(body); // 載入 body
     const confirmResult = []; // 建立一個儲存結果的容器
     const deathResult = []; // 建立一個儲存結果的容器
-    const cheerioDataTitle = $('.dataTitle'); // 爬最外層的 Table(class=BoxTable) 中的 tr
-    const cheerioCurrent = $('.current');
-    const cheerioMoreThan = $('.moreThan');
+    const country = $('.dataCountry');
+    const confirmedCurrent = $('.box._confirmed .current');
+    const confirmedMoreThan = $('.box._confirmed .moreThan');
+    const deathCurrent = $('.box._death .current');
+    const deathMoreThan = $('.box._death .moreThan');
     const cheerioUpdateTime = $('.time').text().trim().split(/([0-9]+)/);
     const updateTime = `${cheerioUpdateTime[1]}/${cheerioUpdateTime[3]}/${cheerioUpdateTime[5]} ${cheerioUpdateTime[7]}:${cheerioUpdateTime[9]}`;
     // const china_conform=table_tr.find('.box _china');
-    for (let i = 0; i < 3; i += 1) {
-      const title = cheerioDataTitle.eq(i).text().trim();
-      const currentCount = cheerioCurrent.eq(i).text().trim();
-      const morethan = cheerioMoreThan.eq(i).text().trim();
+    for (let i = 0; i < 5; i += 1) {
+      const title = `${country.eq(i).text().trim()}確診`;
+      const currentCount = confirmedCurrent.eq(i).text().trim();
+      const morethan = confirmedMoreThan.eq(i).text().trim();
       const confirm = Object.assign({
         title,
         currentCount,
@@ -33,10 +35,12 @@ const dataGet = (req, res) => {
       });
       confirmResult.push(confirm);
     }
-    for (let i = 3; i < 6; i += 1) {
-      const title = cheerioDataTitle.eq(i).text().trim();
-      const currentCount = cheerioCurrent.eq(i).text().trim();
-      const morethan = cheerioMoreThan.eq(i).text().trim();
+    for (let i = 0; i < 5; i += 1) {
+      const title = `${country.eq(i).text().trim()}死亡`;
+      const currentCount = deathCurrent.eq(i).text().trim();
+      const morethan = deathMoreThan.eq(i).text().trim();
+
+      console.log(morethan);
       const death = Object.assign({
         title,
         currentCount,
