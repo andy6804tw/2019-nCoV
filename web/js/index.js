@@ -34,9 +34,9 @@ axios.get(`https://novel-coronavirus-2019.herokuapp.com/virus`)
             const deathList = dataObject['death'];
             const epidemicList = confirmList.concat(deathList);
             const numberDom = document.getElementsByClassName('number');
-
+            const dataIndex=[1,0,4,6,5,9];
             for (let i = 0; i < 6; i += 1) {
-                numberDom[i].innerHTML = `<span class="number-animate" data-end-value="${epidemicList[i].currentCount}" data-increment="1">0</span><br>${epidemicList[i].morethan}`;
+                numberDom[i].innerHTML = `<span class="number-animate" data-end-value="${numeral(epidemicList[dataIndex[i]].currentCount).value()}" data-increment="1">0</span><br>${epidemicList[dataIndex[i]].morethan}`;
             }
             // start animated
             initAnimated();
